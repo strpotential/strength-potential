@@ -1,0 +1,2 @@
+# Strength Potential
+Halla, Jonatan :^)
