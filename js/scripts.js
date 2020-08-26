@@ -59,5 +59,13 @@
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
   });
+  
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var example = button.data('example') // Extract info from data-* attributes
+    var modal = $(this)
+    modal.find('.modal-image').attr("src", 'assets/img/portfolio/fullsize/' + example)
+})
+
 
 })(jQuery); // End of use strict

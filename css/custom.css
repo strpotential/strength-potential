@@ -1,0 +1,32 @@
+/* Overrides */
+.modal-content {
+  background: transparent;
+  border: none;
+}
+.modal-header {
+  border: none;
+}
+
+.modal-header .modal-button {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close {
+    color: #fff;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+button.close:focus {
+    outline:none;
+}
+
+.modal-body__text {
+  background: #fff;
+  padding: 12px;
+}
