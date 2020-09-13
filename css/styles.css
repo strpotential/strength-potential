@@ -73,6 +73,20 @@ body {
   outline: 0 !important;
 }
 
+table {
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(0,0,0, .1);
+}
+
+th:first-child {
+  border-right: 1px solid rgba(0,0,0, .1);
+}
 #logoContainer{
   display: flex;
   justify-content: center;
@@ -9992,33 +10006,21 @@ h3 {
     border: 1px solid #000;
   }
 
-  .table {
-    border-collapse: collapse !important;
+  table {
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
   }
-  .table td,
-.table th {
-    background-color: #fff !important;
+  
+  .border-bottom {
+    border-bottom: 1px solid rgba(0,0,0, .1);
   }
-
-  .table-bordered th,
-.table-bordered td {
-    border: 1px solid #dee2e6 !important;
-  }
-
-  .table-dark {
-    color: inherit;
-  }
-  .table-dark th,
-.table-dark td,
-.table-dark thead th,
-.table-dark tbody + tbody {
-    border-color: #dee2e6;
+  
+  th:first-child {
+    border-right: 1px solid rgba(0,0,0, .1);
   }
 
-  .table .thead-dark th {
-    color: inherit;
-    border-color: #dee2e6;
-  }
 }
 body,
 html {
