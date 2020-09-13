@@ -17,6 +17,48 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- PayPal Checkout API -->
+        <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+        <script>
+        paypal.Button.render({
+            // Configure environment
+            env: 'sandbox',
+            client: {
+            sandbox: 'demo_sandbox_client_id',
+            production: 'demo_production_client_id'
+            },
+            // Customize button (optional)
+            locale: 'en_US',
+            style: {
+            size: 'small',
+            color: 'gold',
+            shape: 'pill',
+            },
+
+            // Enable Pay Now checkout flow (optional)
+            commit: true,
+
+            // Set up a payment
+            payment: function(data, actions) {
+            return actions.payment.create({
+                transactions: [{
+                amount: {
+                    total: '0.01',
+                    currency: 'USD'
+                }
+                }]
+            });
+            },
+            // Execute the payment
+            onAuthorize: function(data, actions) {
+            return actions.payment.execute().then(function() {
+                // Show a confirmation message to the buyer
+                window.alert('Thank you for your purchase!');
+            });
+            }
+        }, '#paypal-button');
+
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -53,6 +95,7 @@
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
+                <div id="paypal-button"></div>
                 <h2 class="text-center mt-0">Mine tjenester</h2>
                 <hr class="divider my-4" />
                 <div class="row justify-content-center align-items-start">
