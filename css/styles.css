@@ -10188,3 +10188,17 @@ header.masthead h1 {
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
 }
+
+/* Media query for mobile viewport */
+@media screen and (max-width: 400px) {
+  #paypal-button-container {
+    width: 100%;
+  }
+}
+
+/* Media query for desktop viewport */
+@media screen and (min-width: 400px) {
+  #paypal-button-container {
+    width: 250px;
+  }
+}
